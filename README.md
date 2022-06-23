@@ -21,7 +21,7 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 ## Official repository and QMK repository
 
 Official repository for the ADM42 keyboard:
-[https://github.com/lleonini/](https://github.com/lleonini/)
+[https://github.com/lleonini/adm42](https://github.com/lleonini/adm42)
 
 A «pure» QMK version of the keyboard is also available in the QMK repository:
 [https://github.com/qmk/qmk_firmware/](https://github.com/qmk/qmk_firmware/)
