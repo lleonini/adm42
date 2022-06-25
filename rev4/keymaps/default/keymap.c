@@ -16,7 +16,7 @@
 
 #include QMK_KEYBOARD_H
 
-#define BRANCH "QMK"
+#define BRANCH "HYPER_SPACE"
 
 enum custom_layers {
 	_QWERTY,
@@ -40,7 +40,6 @@ enum custom_layers {
 #define LC_TAB LCTL_T(KC_TAB)
 #define RC_QUT RCTL_T(KC_QUOT)
 #define LS_BPC LSFT_T(KC_BSPC)
-#define RS_SPC RSFT_T(KC_SPC)
 #define LA_BS LALT_T(KC_BSLS)
 #define LW_F11 LWIN_T(KC_F11)
 #define LC_APP LCTL_T(KC_APP)
@@ -58,6 +57,7 @@ enum custom_keycodes {
 	LOREM,
 	ADM_INF,
 
+	HY_SPAC,
 	LC_CIRC,
 	RC_DLR,
 
@@ -78,13 +78,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			LW_GRV,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    RW_EQU,
 			LC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, RC_QUT,
 			KC_LALT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_LALT,
-			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, RS_SPC,  LLS_RALT
+			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, HY_SPAC, LLS_RALT
 	),
 	[_COLEMAKDH] = LAYOUT_adm42_3x12_6(
 			LW_GRV,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, RW_EQU,
 			LC_TAB,  KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_I,    KC_O,    RC_QUT,
 			KC_LALT, KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_LALT,
-			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, RS_SPC,  LLS_RALT
+			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, HY_SPAC, LLS_RALT
 	),
 
 	// https://dreymar.colemak.org/tarmak.html#tmk-dh
@@ -92,37 +92,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			LW_GRV,  KC_Q,    KC_W,    KC_J,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    RW_EQU,
 			LC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_N,    KC_E,    KC_L,    KC_SCLN, RC_QUT,
 			KC_LALT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_LALT,
-			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, RS_SPC,  LLS_RALT
+			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, HY_SPAC, LLS_RALT
 	),
 	[_TARMAK1B] = LAYOUT_adm42_3x12_6(
 			LW_GRV,  KC_Q,    KC_W,    KC_J,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    RW_EQU,
 			LC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_M,    KC_N,    KC_E,    KC_L,    KC_SCLN, RC_QUT,
 			KC_LALT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_LALT,
-			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, RS_SPC,  LLS_RALT
+			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, HY_SPAC, LLS_RALT
 	),
 	[_TARMAK2A] = LAYOUT_adm42_3x12_6(
 			LW_GRV,  KC_Q,    KC_W,    KC_J,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    RW_EQU,
 			LC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_M,    KC_N,    KC_E,    KC_L,    KC_SCLN, RC_QUT,
 			KC_LALT, KC_Z,    KC_X,    KC_C,    KC_B,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_LALT,
-			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, RS_SPC,  LLS_RALT
+			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, HY_SPAC, LLS_RALT
 	),
 	[_TARMAK2B] = LAYOUT_adm42_3x12_6(
 			LW_GRV,  KC_Q,    KC_W,    KC_F,    KC_R,    KC_B,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    RW_EQU,
 			LC_TAB,  KC_A,    KC_S,    KC_D,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_L,    KC_SCLN, RC_QUT,
 			KC_LALT, KC_Z,    KC_X,    KC_C,    KC_B,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_LALT,
-			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, RS_SPC,  LLS_RALT
+			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, HY_SPAC, LLS_RALT
 	),
 	[_TARMAK3] = LAYOUT_adm42_3x12_6(
 			LW_GRV,  KC_Q,    KC_W,    KC_F,    KC_J,    KC_B,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    RW_EQU,
 			LC_TAB,  KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_L,    KC_SCLN, RC_QUT,
 			KC_LALT, KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_LALT,
-			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, RS_SPC,  LLS_RALT
+			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, HY_SPAC, LLS_RALT
 	),
 	[_TARMAK4] = LAYOUT_adm42_3x12_6(
 			LW_GRV,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_U,    KC_I,    KC_Y,    KC_SCLN, RW_EQU,
 			LC_TAB,  KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_L,    KC_O,    RC_QUT,
 			KC_LALT, KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_LALT,
-			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, RS_SPC,  LLS_RALT
+			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, HY_SPAC, LLS_RALT
 	),
 
 	[_SPECIAL] = LAYOUT_adm42_3x12_6(
@@ -203,6 +203,183 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 	}
 }
 
+/* HYPER_SPACE: Smart SPACE + SHIFT mod_tap key
+
+Limitations:
+- Before starting tap-hold, it's necessary to wait an additional TAPPING_TERM:
+  we can't start before because it can be SPACE, SHIFT <key> or SPACE, SPACE/hold.
+- Rolling shift with other mod_tap keys will not work: the mod_tap key send the tap key only
+  on release, at the time, HYPER_SPACE as already been released and SHIFT is gone.
+*/
+
+// If space is not seen as space when typing fast, increase the delay.
+// If shifted keys are not shifted, decrease the delay.
+#define HS_OVERLAP_MS (TAPPING_TERM / 4)
+
+static uint16_t hs_timer = 0;
+static uint16_t hs_next_key_timer = 0;
+static uint16_t hs_last_space_timer = 0;
+static uint16_t hs_next_key = 0;
+static bool hs_in_progress = false;
+static bool hs_last_space = false;
+static bool hs_potential_space_hold = false;
+static int hs_release_space = false;
+static int hs_space_hold = false;
+
+bool hyper_space(uint16_t keycode, keyrecord_t *record) {
+
+	if (!hs_in_progress) {
+		if (keycode == HY_SPAC) {
+			if (record->event.pressed) {
+				// Will be considered as SPACE/hold only if repeated after a SPACE in the
+				// TAPPING_TERM and if hold during TAPPING_TERM without any other key release
+				if (hs_last_space && timer_elapsed(hs_last_space_timer) <= TAPPING_TERM) {
+					hs_potential_space_hold = true;
+				} else {
+					hs_potential_space_hold = false;
+				}
+				hs_last_space = false;
+
+				// The role of the key will be defined later
+				hs_in_progress = true;
+				// By default considered as SHIFT
+				hs_release_space = false;
+				// Buffer for the NEXT key
+				hs_next_key = 0;
+				// Start timer
+				hs_timer = timer_read();
+				// True if space + space (hold)
+				hs_space_hold = false;
+
+			} else { // release
+
+				if (hs_release_space) {
+					dprintf("HyperSpace: Release SPACE\n");
+					unregister_code(KC_SPC);
+				} else {
+					dprintf("HyperSpace: Release SHIFT\n");
+					unregister_code(KC_RSFT);
+				}
+				// Important!
+				hs_space_hold = false;
+			}
+			return false;
+		} else {
+			// We are in space hold and another key is pressed, in that case we switch to SHIFT mode:
+			if (hs_space_hold && record->event.pressed) {
+				hs_space_hold = false;
+				dprintf("HyperSpace: Release SPACE (hold)\n");
+				unregister_code(KC_SPC);
+				dprintf("HyperSpace: SHIFT\n");
+				register_code(KC_RSFT);
+				hs_release_space = false;
+				return true;
+			}
+		}
+
+	} else { // hs_in_progress
+
+		hs_in_progress = false;
+
+		if (record->event.pressed) { // Code below will concern another key than HYPER_SPACE
+		
+			if (keycode == HY_SPAC) dprintf("HyperSpace: BUG: HS pressed when already in progress\n");
+
+			hs_potential_space_hold = false;
+
+			// Next key press
+			if (keycode >= KC_A && keycode <= KC_Z) {
+				if (hs_next_key) {
+					// More than one key is pressed after HYPER_SPACE, consider as SHIFT, press the previous
+					// key and continue normal processing
+					dprintf("HyperSpace: SHIFT-%u\n", hs_next_key);
+					register_code(KC_RSFT);
+					hs_release_space = false;
+					register_code(hs_next_key);
+					return true;
+				} else {
+					// Buffer key (and store time) until another event
+					hs_in_progress = true;
+					hs_next_key = keycode;
+					hs_next_key_timer = timer_read();
+					return false;
+				}
+			} else {
+				// Another unrelated key is pressed, stop special ovelapping processing,
+				// key will now immediately act as SHIFT and continue normal processing
+				dprintf("HyperSpace: SHIFT (other key pressed)\n");
+				register_code(KC_RSFT);
+				hs_release_space = false;
+				if (hs_next_key) { // unlikely (would mean that 3 keys are pressed ATM)
+					register_code(hs_next_key);
+				}
+				return true;
+			}
+
+		} else { // release
+
+			if (keycode == HY_SPAC) {
+				if (hs_next_key) {
+					// Here we have an overlap between HYPER_SPACE and the next key, we have
+					// to determine if that's a SHIFT(key) or SPACE, key based on timings.
+					if (timer_elapsed(hs_next_key_timer) < HS_OVERLAP_MS) {
+						// Small overlap => SPACE + key
+						dprintf("HyperSpace: SPACE, %u (overlap %ums < %u)\n",
+								hs_next_key,
+								timer_elapsed(hs_next_key_timer),
+								HS_OVERLAP_MS);
+						tap_code(KC_SPC);
+						register_code(hs_next_key);
+					} else {
+						// Big overlap => SHIFT + key
+						dprintf("HyperSpace: SHIFT-%u (overlap %ums >= %u)\n",
+								hs_next_key,
+								timer_elapsed(hs_next_key_timer),
+								HS_OVERLAP_MS);
+						register_code(KC_RSFT);
+						register_code(hs_next_key);
+						unregister_code(KC_RSFT);
+					}
+				} else { // No other key pressed
+					if (timer_elapsed(hs_timer) <= TAPPING_TERM) {
+						// Pure space
+						dprintf("HyperSpace: SPACE\n");
+						tap_code(KC_SPC);
+						hs_last_space = true;
+						hs_last_space_timer = timer_read();
+					} else {
+						// Nothing happened with HS key, also matrix_scan_user() hasn't
+						// been called yet or we couldn't be here, we just do nothing
+						// more (we already set hs_in_progress to false).
+						dprintf("HyperSpace: No effect\n");
+					}
+				}
+				return false;
+			} else if (keycode == hs_next_key) {
+				// HYPER_SPACE completely overlap the key (case 3 or 5)
+				dprintf("HyperSpace: SHIFT-%u\n", keycode);
+				register_code(KC_RSFT);
+				hs_release_space = false;
+				tap_code(keycode);
+				return false;
+			} else {
+				// A key, pressed before HYPER_SPACE, is now released
+				// 1) CTRL + SPACE, SHIFT + SPACE, ...
+				// 2) Typing fast, a previous letter slightly overlap HYPER_SPACE
+				// => Act as SPACE and continue normal processing
+				hs_release_space = true;
+				dprintf("HyperSpace: SPACE (prev overlap)\n");
+				register_code(KC_SPC);
+				if (hs_next_key) { // unlikely
+					register_code(hs_next_key);
+				}
+				return true;
+			}
+		}
+	}
+	return true;
+}
+
 // Print output via keyboard
 void print_keyboard(char *msg) {
 	uint8_t temp = keyboard_report->mods;
@@ -237,6 +414,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef CONSOLE_ENABLE
 	uprintf("KL: kc: 0x%04X, col: %u, row: %u, pressed: %b, time: %u, interrupt: %b, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
 #endif
+
+	if (!hyper_space(keycode, record)) {
+		return cleanup_return(keycode, record, false);
+	}
 
 	switch (keycode) {
 
@@ -338,6 +519,26 @@ dictum ac, viverra ac, imperdiet a, lacus. Nulla mi.");
 
 	 default:
 		return cleanup_return(keycode, record, true);
+	}
+}
+
+void matrix_scan_user(void) {
+	if (hs_in_progress && timer_elapsed(hs_timer) > TAPPING_TERM) {
+		// If TAPPING_TERM is elapsed, we now decide the role of HYPER_SPACE
+		hs_in_progress = false;
+		if (hs_potential_space_hold) {
+			hs_space_hold = true;
+			dprintf("HyperSpace: SPACE HOLD\n");
+			register_code(KC_SPC);
+			hs_release_space = true;
+		} else {
+			dprintf("HyperSpace: SHIFT (> TAPPING_TERM)\n");
+			register_code(KC_RSFT);
+			hs_release_space = false;
+		}
+		if (hs_next_key) {
+			register_code(hs_next_key);
+		}
 	}
 }
 
