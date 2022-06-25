@@ -109,7 +109,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_TARMAK2B] = LAYOUT_adm42_3x12_6(
 			LW_GRV,  KC_Q,    KC_W,    KC_F,    KC_R,    KC_B,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    RW_EQU,
 			LC_TAB,  KC_A,    KC_S,    KC_D,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_L,    KC_SCLN, RC_QUT,
-			KC_LALT, KC_Z,    KC_X,    KC_C,    KC_B,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_LALT,
+			KC_LALT, KC_Z,    KC_X,    KC_C,    KC_J,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_LALT,
 			                           LLS_ESC, LS_BPC,  LLA_DEL, LLE_ENT, HY_SPAC, LLS_RALT
 	),
 	[_TARMAK3] = LAYOUT_adm42_3x12_6(
